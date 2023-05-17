@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GuestMasterPage.master.cs" Inherits="GuestMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1000px;
+            border: 2px solid #008000;
+            margin-left:auto;
+            margin-right:auto;
+            
+        }
+        .auto-style2 {
+            width: 100%;
+            border: 1px solid #FF0000;
+        }
+        .auto-style3 {
+            width: 100%;
+            border: 2px solid #0000FF;
+        }
+        .auto-style4 {
+            width: 100%;
+            border: 2px solid #800080;
+        }
+        .auto-style5 {
+            width: 100%;
+            border: 2px solid #800000;
+        }
+        .auto-style6 {
+            width: 213px;
+        }
+        .auto-style7 {
+            width: 200px;
+        }
+        .auto-style8 {
+            width: 210px;
+        }
+        .auto-style9 {
+            width: 148px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <table class="auto-style2">
+                        <tr>
+                            <td class="auto-style6">
+                                <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/images/logo.png" Width="200px" />
+                            </td>
+                            <td>
+                                <asp:Image ID="Image2" runat="server" Height="200px" ImageUrl="~/images/banner.png" Width="800px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style3">
+                        <tr>
+                            <td class="auto-style7">
+                                <asp:AdRotator ID="AdRotator1" runat="server" Height="200px" Width="200px" AdvertisementFile="~/Ad.xml" />
+                            </td>
+                            <td class="auto-style8">
+                                <asp:Calendar ID="Calendar1" runat="server" Height="194px" Width="200px"></asp:Calendar>
+                            </td>
+                            <td>
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                                </asp:SiteMapPath>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style4">
+                        <tr>
+                            <td class="auto-style9">
+                                <asp:TreeView ID="TreeView1" runat="server" align="top" DataSourceID="SiteMapDataSource1" ShowLines="True">
+                                </asp:TreeView>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                            </td>
+                            <td id="content" style="border: thin dashed #008080; height: 300px;" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style5">
+                        <tr>
+                            <td id="footer" align="center">
+                                &copy; Copyright reserved(suraj khatri)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMasterPage.master.cs" Inherits="StudentMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left:auto;
+            margin-right:auto;
+            
+            width: 1000px;
+            border: 2px solid #800000;
+            background-color: #FFCCCC;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style3 {
+            width: 194px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <table class="auto-style1">
+            <tr>
+                <td style="font-family: Arial, Helvetica, sans-serif; font-size: xx-large; font-weight: bold; font-style: normal; color: #000000; text-align: center;">STUDENT`S HOME PAGE</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style2">
+                        <tr>
+                            <td class="auto-style3" style="vertical-align: top">
+                                &nbsp;welcome
+                                <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
+                                !!!<br />
+                                <br />
+                                <asp:LinkButton ID="btnlogout" runat="server" OnClick="btnlogout_Click">Logout</asp:LinkButton>
+                                <br />
+                                <asp:HyperLink ID="btnHome" runat="server" NavigateUrl="~/StudentHome.aspx">Home Page</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="btnlist" runat="server" NavigateUrl="~/ListOfCourse.aspx">List of courses</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="btnsubject" runat="server" NavigateUrl="~/Subjects.aspx">Subjects</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="btnuploadimg" runat="server" NavigateUrl="~/UploadPhoto.aspx">Upload Image</asp:HyperLink>
+                            </td>
+                            <td style="vertical-align: top; height: 300px;">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="font-family: Arial, Helvetica, sans-serif; text-align: center">
+                <td style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: #CC3300">&copy; copyright Reserved(suraj khatri)</td>
+            </tr>
+        </table>
+    
+    </form>
+</body>
+</html>

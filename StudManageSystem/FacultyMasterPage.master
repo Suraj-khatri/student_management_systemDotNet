@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FacultyMasterPage.master.cs" Inherits="FacultyMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 184px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <table class="auto-style1">
+            <tr>
+                <td style="color: #800000; font-family: 'Courier New', Courier, monospace; font-size: xx-large; font-weight: bold; text-decoration: underline; text-align: center; background-color: #FFFF99;">Faculty Home Page</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style2" style="vertical-align: top; background-color: #FFCC99; font-size: large; font-weight: bold;">welcome
+                                <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
+                                !!!<br />
+                                <asp:Menu ID="Menu1" runat="server">
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/FacultyHome.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                        <asp:MenuItem Text="Student Details" Value="Student Details">
+                                            <asp:MenuItem NavigateUrl="~/ViewStudents.aspx" Text="View Students" Value="View Students"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/GetStudentsDetails.aspx" Text="Get Student Details" Value="Get Student Details"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                                    </Items>
+                                    <StaticMenuItemStyle Font-Bold="True" Font-Size="X-Large" />
+                                </asp:Menu>
+                            </td>
+                            <td style="height: 300px; background-color: #FFCC99; vertical-align: top;">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="font-family: 'Courier New', Courier, monospace; text-align: center; color: #993300;">
+                <td style="background-color: #FFFFCC">&copy;copyright reserved(suraj khatri)</td>
+            </tr>
+        </table>
+    
+    </form>
+</body>
+</html>

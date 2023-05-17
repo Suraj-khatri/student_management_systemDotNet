@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1000px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style3 {
+            width: 167px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <asp:Image ID="imgadmin" runat="server" ImageUrl="~/images/banner.png" Height="229px" Width="1002px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="auto-style2">
+                        <tr>
+                            <td class="auto-style3" style="color: #808080; vertical-align: top; text-align: left;">Wel Come <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
+                                !!!<br />
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AdminHome.aspx">Home</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ViewFaculty.aspx">View Faculty</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ViewFeedback.aspx">View Feedback</asp:HyperLink>
+                            </td>
+                            <td style="vertical-align: top; height: 400px; width: 1000px;">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    <p style="vertical-align: top">
+                                        &nbsp;</p>
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: #FF3399; font-weight: normal; font-size: large; text-align: center;">&copy;copyright reserved(suraj khatri)</td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

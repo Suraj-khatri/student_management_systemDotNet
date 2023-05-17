@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~/images/hostel1.jpg</ImageUrl>
+		<NavigateUrl>http://www.google.com</NavigateUrl>
+		<AlternateText>This is hostel1.</AlternateText>
+		<Keywords>hostel</Keywords>
+		<Impressions>1</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/images/hostel2.jpg</ImageUrl>
+		<NavigateUrl>http://www.google.com</NavigateUrl>
+		<AlternateText>This is hostel2.</AlternateText>
+		<Keywords>hostel2</Keywords>
+		<Impressions>2</Impressions>
+	</Ad>
+
+</Advertisements>
